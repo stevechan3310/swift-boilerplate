@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 15301d3a7f14abd6ab394c41a113436edebb460b
+PODS:
+  - DateToolsSwift (4.0.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - DateToolsSwift
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - DateToolsSwift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 931db9e989a1bf55a075f8d4c55a84213e7a5b91
 
 COCOAPODS: 1.8.4
