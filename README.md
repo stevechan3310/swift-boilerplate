@@ -29,6 +29,10 @@ Common used third party libraries are included in this boilerplate
 1. [DateTools](https://github.com/MatthewYork/DateTools) - Convenient way to format or modify your dates
 2. [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) - Clean and easy-to-use HUD meant to display the progress of an ongoing task
 
+## Analytics
+One of the commonly used to collect app's analytics and crash reports is Firebase. It is free and provides detailed information about crashes or memory leaks with insights on common issues with solutions on how to solve them.
+Follow the instructions [here](https://firebase.google.com/docs/ios/setup?authuser=0) to add firebase into your iOS app.
+
 ## Contributing
 Feel free to contribute to this boilerplate if you have better approach or practices. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
