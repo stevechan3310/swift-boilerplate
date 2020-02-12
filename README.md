@@ -24,10 +24,14 @@ swift-boilerplate.xcworkspace
 
 ## Architecture
 
+## App Language
+In-App localization is included in this boilerplate using Localize-Swift library. To add more language, just go to PROJECT > INFO > LOCALIZATION and click on + to add language. Then proceed to Localizable.strings and add your localize strings for each language you want to translate.
+
 ## Libraries
 Common used third party libraries are included in this boilerplate
 1. [DateTools](https://github.com/MatthewYork/DateTools) - Convenient way to format or modify your dates
 2. [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) - Clean and easy-to-use HUD meant to display the progress of an ongoing task
+3. [Localize-Swift](https://github.com/marmelroy/Localize-Swift) - Localization made easy with this library, able to generate list of strings found in your project which need to be localized
 
 ## Analytics
 One of the commonly used to collect app's analytics and crash reports is Firebase. It is free and provides detailed information about crashes or memory leaks with insights on common issues with solutions on how to solve them.
