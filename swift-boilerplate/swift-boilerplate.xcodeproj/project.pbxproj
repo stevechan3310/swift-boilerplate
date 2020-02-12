@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620E4C9D23F3DE3200F4C8DD /* InAppLocalizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E4C9C23F3DE3200F4C8DD /* InAppLocalizationVC.swift */; };
+		620E4CA323F3F3D700F4C8DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 620E4CA523F3F3D700F4C8DD /* Localizable.strings */; };
 		624CA3B123AB7A09000E12A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624CA3B023AB7A09000E12A6 /* AppDelegate.swift */; };
 		624CA3B523AB7A09000E12A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624CA3B423AB7A09000E12A6 /* ViewController.swift */; };
 		624CA3B823AB7A09000E12A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624CA3B623AB7A09000E12A6 /* Main.storyboard */; };
@@ -42,6 +44,9 @@
 		19F35784A6BC6BEA13F2188A /* Pods-swift-boilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-boilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-swift-boilerplateTests/Pods-swift-boilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D43A44818EDD5A613083E65 /* Pods-swift-boilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-boilerplate.release.xcconfig"; path = "Target Support Files/Pods-swift-boilerplate/Pods-swift-boilerplate.release.xcconfig"; sourceTree = "<group>"; };
 		60F49BB997E139890B4A5A77 /* Pods-swift-boilerplate-swift-boilerplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-boilerplate-swift-boilerplateUITests.release.xcconfig"; path = "Target Support Files/Pods-swift-boilerplate-swift-boilerplateUITests/Pods-swift-boilerplate-swift-boilerplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		620E4C9C23F3DE3200F4C8DD /* InAppLocalizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppLocalizationVC.swift; sourceTree = "<group>"; };
+		620E4CA423F3F3D700F4C8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		620E4CA623F3F3F100F4C8DD /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
 		624CA3AD23AB7A09000E12A6 /* swift-boilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-boilerplate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		624CA3B023AB7A09000E12A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		624CA3B423AB7A09000E12A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +94,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620E4C9523F3D88800F4C8DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		620E4C9623F3D89400F4C8DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				620E4C9B23F3DE1A00F4C8DD /* InAppLocalizationDemo */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		620E4C9723F3D89B00F4C8DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		620E4C9823F3DC5800F4C8DD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		620E4C9923F3DC9C00F4C8DD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		620E4C9A23F3DD5900F4C8DD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		620E4C9B23F3DE1A00F4C8DD /* InAppLocalizationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				620E4C9C23F3DE3200F4C8DD /* InAppLocalizationVC.swift */,
+			);
+			path = InAppLocalizationDemo;
+			sourceTree = "<group>";
+		};
+		620E4CA023F3F38100F4C8DD /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				620E4CA523F3F3D700F4C8DD /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		624CA3A423AB7A09000E12A6 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +178,13 @@
 		624CA3AF23AB7A09000E12A6 /* swift-boilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				620E4CA023F3F38100F4C8DD /* Language */,
+				620E4C9823F3DC5800F4C8DD /* Constants */,
+				620E4C9A23F3DD5900F4C8DD /* Managers */,
+				620E4C9923F3DC9C00F4C8DD /* Network */,
+				620E4C9523F3D88800F4C8DD /* Models */,
+				620E4C9723F3D89B00F4C8DD /* Views */,
+				620E4C9623F3D89400F4C8DD /* Controllers */,
 				624CA3B023AB7A09000E12A6 /* AppDelegate.swift */,
 				624CA3B423AB7A09000E12A6 /* ViewController.swift */,
 				624CA3B623AB7A09000E12A6 /* Main.storyboard */,
@@ -162,7 +233,6 @@
 				19F35784A6BC6BEA13F2188A /* Pods-swift-boilerplateTests.debug.xcconfig */,
 				F461915CC8C64B82545A14C8 /* Pods-swift-boilerplateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -257,6 +327,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ms,
 			);
 			mainGroup = 624CA3A423AB7A09000E12A6;
 			productRefGroup = 624CA3AE23AB7A09000E12A6 /* Products */;
@@ -276,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624CA3BD23AB7A0B000E12A6 /* LaunchScreen.storyboard in Resources */,
+				620E4CA323F3F3D700F4C8DD /* Localizable.strings in Resources */,
 				624CA3BA23AB7A0B000E12A6 /* Assets.xcassets in Resources */,
 				624CA3B823AB7A09000E12A6 /* Main.storyboard in Resources */,
 			);
@@ -406,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624CA3B523AB7A09000E12A6 /* ViewController.swift in Sources */,
+				620E4C9D23F3DE3200F4C8DD /* InAppLocalizationVC.swift in Sources */,
 				624CA3B123AB7A09000E12A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +515,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		620E4CA523F3F3D700F4C8DD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				620E4CA423F3F3D700F4C8DD /* en */,
+				620E4CA623F3F3F100F4C8DD /* ms */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		624CA3B623AB7A09000E12A6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -465,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -525,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

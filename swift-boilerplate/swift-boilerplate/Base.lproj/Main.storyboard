@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hdj-SU-rnP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--swift-boilerplate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_boilerplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-dq-zPe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="RM0-NL-RLF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="In-App Localization">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLE-iK-wQt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oVi-dq-zPe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FhB-Gh-4Tr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVi-dq-zPe" secondAttribute="trailing" id="Opj-Xx-scC"/>
+                            <constraint firstItem="oVi-dq-zPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xHv-5X-YXB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="swift-boilerplate" id="Z9c-6G-eKF"/>
+                    <connections>
+                        <outlet property="btnLanguage" destination="oVi-dq-zPe" id="Xve-2I-aAo"/>
+                        <segue destination="YPu-kR-9hH" kind="show" identifier="segue_to_inapplocalizationdemo" id="R5M-Bb-ZlX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="455" y="-206"/>
+        </scene>
+        <!--In-App Localization Demo-->
+        <scene sceneID="n8M-Fw-kLP">
+            <objects>
+                <viewController storyboardIdentifier="InAppLocalizationVC" id="YPu-kR-9hH" customClass="InAppLocalizationVC" customModule="swift_boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWT-bV-wXv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvk-yZ-tuE">
+                                <rect key="frame" x="20" y="108" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6r-bV-idy">
+                                <rect key="frame" x="20" y="149" width="374" height="60"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZyG-XY-hwl"/>
+                                </constraints>
+                                <state key="normal" title="Original text">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu0-It-TA4">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M9m-y7-XJR"/>
+                                </constraints>
+                                <state key="normal" title="Translate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="translate:" destination="YPu-kR-9hH" eventType="touchUpInside" id="Gx0-Z9-UEz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k6r-bV-idy" firstAttribute="leading" secondItem="mdi-Fv-DTN" secondAttribute="leading" constant="20" id="59C-V4-1li"/>
+                            <constraint firstItem="xvk-yZ-tuE" firstAttribute="top" secondItem="mdi-Fv-DTN" secondAttribute="top" constant="20" id="7kn-JD-YF2"/>
+                            <constraint firstItem="k6r-bV-idy" firstAttribute="top" secondItem="xvk-yZ-tuE" secondAttribute="bottom" constant="20" id="7nT-sY-DPG"/>
+                            <constraint firstItem="vu0-It-TA4" firstAttribute="leading" secondItem="mdi-Fv-DTN" secondAttribute="leading" id="Os2-2H-DqL"/>
+                            <constraint firstItem="xvk-yZ-tuE" firstAttribute="leading" secondItem="mdi-Fv-DTN" secondAttribute="leading" constant="20" id="V1D-iZ-6si"/>
+                            <constraint firstItem="mdi-Fv-DTN" firstAttribute="trailing" secondItem="vu0-It-TA4" secondAttribute="trailing" id="aPt-Q2-dxg"/>
+                            <constraint firstItem="vu0-It-TA4" firstAttribute="bottom" secondItem="mdi-Fv-DTN" secondAttribute="bottom" id="q0W-mI-4ph"/>
+                            <constraint firstItem="mdi-Fv-DTN" firstAttribute="trailing" secondItem="k6r-bV-idy" secondAttribute="trailing" constant="20" id="vtu-gf-fqe"/>
+                            <constraint firstItem="mdi-Fv-DTN" firstAttribute="trailing" secondItem="xvk-yZ-tuE" secondAttribute="trailing" constant="20" id="xD6-2o-ALp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mdi-Fv-DTN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="In-App Localization Demo" id="Dgb-7n-4uS"/>
+                    <connections>
+                        <outlet property="btnText" destination="k6r-bV-idy" id="Z93-0c-k22"/>
+                        <outlet property="btnTranslate" destination="vu0-It-TA4" id="tRA-hg-nK7"/>
+                        <outlet property="lblText" destination="xvk-yZ-tuE" id="a6R-LK-gjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeB-ZV-sFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-546"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YqC-ku-lVW">
+            <objects>
+                <navigationController id="hdj-SU-rnP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kM6-RQ-2Zk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TiF-Vc-v1i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWX-t9-oVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-435" y="-205"/>
         </scene>
     </scenes>
 </document>

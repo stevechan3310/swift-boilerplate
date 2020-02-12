@@ -8,6 +8,7 @@ target 'swift-boilerplate' do
   # Pods for swift-boilerplate
   pod 'DateToolsSwift'
   pod 'SVProgressHUD'
+  pod 'Localize-Swift', '~> 2.0'
 
   target 'swift-boilerplateTests' do
     inherit! :search_paths
