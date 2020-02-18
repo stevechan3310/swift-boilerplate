@@ -27,6 +27,18 @@ swift-boilerplate.xcworkspace
 ## App Language
 In-App localization is included in this boilerplate using Localize-Swift library. To add more language, just go to PROJECT > INFO > LOCALIZATION and click on + to add language. Then proceed to Localizable.strings and add your localize strings for each language you want to translate.
 
+You can also use the genstrings.swift to auto-generate strings that needs to be translated throughout your app. Just run below code on your project root folder in your terminal and any strings that have .localized will be generated on the terminal where you can just copy and paste into your Localizable.strings and add translation.
+
+```
+./genstrings.swift
+
+```
+## Constants
+
+
+## Extensions
+
+
 ## Libraries
 Common used third party libraries are included in this boilerplate
 1. [DateTools](https://github.com/MatthewYork/DateTools) - Convenient way to format or modify your dates
