@@ -18,6 +18,7 @@
 		624CA3D323AB7A0B000E12A6 /* swift_boilerplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624CA3D223AB7A0B000E12A6 /* swift_boilerplateUITests.swift */; };
 		62912D9923F52A9D00C7C945 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912D9823F52A9D00C7C945 /* Constants.swift */; };
 		62912D9D23F5356400C7C945 /* UIDevice_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912D9C23F5356400C7C945 /* UIDevice_Extension.swift */; };
+		62CE3BD323FBEC9E008B6F24 /* UIAlertController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE3BD223FBEC9E008B6F24 /* UIAlertController_Extension.swift */; };
 		707C59DA4A657B3925A7029D /* Pods_swift_boilerplate_swift_boilerplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78450533739C338A744A8A68 /* Pods_swift_boilerplate_swift_boilerplateUITests.framework */; };
 		DC20281E475395F258ECFD9F /* Pods_swift_boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981FE6C32F6AB284C84EDB92 /* Pods_swift_boilerplate.framework */; };
 		FC311092360A72EB3C1EA8FC /* Pods_swift_boilerplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B832838CE025674ECD0AA2 /* Pods_swift_boilerplateTests.framework */; };
@@ -64,6 +65,7 @@
 		624CA3D423AB7A0B000E12A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62912D9823F52A9D00C7C945 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62912D9C23F5356400C7C945 /* UIDevice_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice_Extension.swift; sourceTree = "<group>"; };
+		62CE3BD223FBEC9E008B6F24 /* UIAlertController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController_Extension.swift; sourceTree = "<group>"; };
 		78450533739C338A744A8A68 /* Pods_swift_boilerplate_swift_boilerplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_boilerplate_swift_boilerplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981FE6C32F6AB284C84EDB92 /* Pods_swift_boilerplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_boilerplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3559E66BB60421BF4BA45AB /* Pods-swift-boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-boilerplate.debug.xcconfig"; path = "Target Support Files/Pods-swift-boilerplate/Pods-swift-boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				62912D9C23F5356400C7C945 /* UIDevice_Extension.swift */,
+				62CE3BD223FBEC9E008B6F24 /* UIAlertController_Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 			files = (
 				624CA3B523AB7A09000E12A6 /* ViewController.swift in Sources */,
 				620E4C9D23F3DE3200F4C8DD /* InAppLocalizationVC.swift in Sources */,
+				62CE3BD323FBEC9E008B6F24 /* UIAlertController_Extension.swift in Sources */,
 				624CA3B123AB7A09000E12A6 /* AppDelegate.swift in Sources */,
 				62912D9D23F5356400C7C945 /* UIDevice_Extension.swift in Sources */,
 				62912D9923F52A9D00C7C945 /* Constants.swift in Sources */,

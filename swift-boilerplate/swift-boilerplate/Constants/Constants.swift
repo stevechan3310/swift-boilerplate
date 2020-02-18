@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// MARK: APPLICATION
 /// App configuration
 enum Config {
     static let backendVersion:NSString = "8"
@@ -21,6 +22,7 @@ enum Config {
     }
 }
 
+// MARK: COLOR
 /// Enum for color used in the app
 enum Colors {
     static let primaryColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
@@ -31,6 +33,7 @@ enum Colors {
     static let backgroundColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
 }
 
+// MARK: DEVICE
 /// Information related to the device using this app
 enum DeviceInfo {
     static let modelName:String = UIDevice.modelName
@@ -38,6 +41,7 @@ enum DeviceInfo {
     static let UUID:String = UIDevice.UUID
 }
 
+// MARK: KEYS
 /// Constants of keys for values
 enum Keys {
     enum keychain {

@@ -22,5 +22,11 @@ class ViewController: UIViewController {
     @IBAction func inAppLocalizationDemo(_ sender: Any) {
         self.performSegue(withIdentifier: "segue_to_inapplocalizationdemo", sender: self)
     }
+    
+    @IBAction func getDeviceInfo(_ sender: Any) {
+        UIAlertController().showConfirmDialog(title: "DEVICE INFO".localized(), message: String.init(format: "Device ID: %@\nDevice Model: %@\nDevice OS: %@", DeviceInfo.UUID, DeviceInfo.modelName, DeviceInfo.OS), senderVC: self) { (isOkTapped) in
+            print("Is OK button tapped - ", isOkTapped ? "Yes" : "No")
+        }
+    }
 }
 

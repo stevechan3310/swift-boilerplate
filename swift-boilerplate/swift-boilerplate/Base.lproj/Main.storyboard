@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hdj-SU-rnP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hdj-SU-rnP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,11 +30,29 @@
                                     <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLE-iK-wQt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDl-Lt-8So">
+                                <rect key="frame" x="0.0" y="156" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="diX-AN-R3d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get device info">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getDeviceInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6x-eV-ThL"/>
+                                    <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ui-PM-GS7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oVi-dq-zPe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FhB-Gh-4Tr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVi-dq-zPe" secondAttribute="trailing" id="Opj-Xx-scC"/>
+                            <constraint firstItem="eDl-Lt-8So" firstAttribute="top" secondItem="oVi-dq-zPe" secondAttribute="bottom" constant="8" id="dU0-g4-yx9"/>
+                            <constraint firstItem="eDl-Lt-8So" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA3-cE-Fcm"/>
+                            <constraint firstItem="eDl-Lt-8So" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rNR-SG-RoE"/>
                             <constraint firstItem="oVi-dq-zPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xHv-5X-YXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

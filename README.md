@@ -53,10 +53,23 @@ Colors.primaryColor
 ```
 
 ## Extensions
+Extensions add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling).
 
+In this boilerplate, few extensions has been added in below classes
+
+1. UIDevice (UIDevice_Extension.swift) 
+	- Get device model code mapped to it's model name. Eg. "iPhone12,3" mapped to as "iPhone 11 Pro".
+	- Get device ID with persistent from keychain.
+	- Get device OS with "iOS" prefix. Eg. "iOS 13.3"
+
+2. UIAlertController (UIAlertController_Extension.swift)
+	- showConfirmDialog, shows a confirmation dialog with title, message and a completion block for handling convenience.
+
+Adding more extension soon...
 
 ## Libraries
 Common used third party libraries are included in this boilerplate
+
 1. [DateTools](https://github.com/MatthewYork/DateTools) - Convenient way to format or modify your dates
 2. [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) - Clean and easy-to-use HUD meant to display the progress of an ongoing task
 3. [Localize-Swift](https://github.com/marmelroy/Localize-Swift) - Localization made easy with this library, able to generate list of strings found in your project which need to be localized
