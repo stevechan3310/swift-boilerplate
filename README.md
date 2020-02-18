@@ -31,10 +31,26 @@ You can also use the genstrings.swift to auto-generate strings that needs to be 
 
 ```
 ./genstrings.swift
-
 ```
 ## Constants
+In this boilerplate, case-less enum is used to create constants for such as colors, configs for your app or even keys for your values in UserDefault or Keychain. Enum for Colors as below.
 
+```
+enum Colors {
+    static let primaryColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+    static let secondaryColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+    
+    static let headerBarColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+    
+    static let backgroundColor:UIColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+}
+```
+
+Usage is as below example
+
+```
+Colors.primaryColor
+```
 
 ## Extensions
 
