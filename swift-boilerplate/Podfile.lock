@@ -2,23 +2,27 @@ PODS:
   - DateToolsSwift (4.0.0)
   - Localize-Swift (2.0.0)
   - SVProgressHUD (2.2.5)
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - DateToolsSwift
   - Localize-Swift (~> 2.0)
   - SVProgressHUD
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - DateToolsSwift
     - Localize-Swift
     - SVProgressHUD
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: d92e22272f6544c5fd03f9440c1d8334d1ffeb5d
+PODFILE CHECKSUM: 424c76fcf7e587373f4cf72cb7e32f1ff7b8029a
 
 COCOAPODS: 1.8.4
