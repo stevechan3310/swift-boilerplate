@@ -19,17 +19,19 @@ public extension UIAlertController {
     ///   - senderVC: UIViewController which calls this dialog
     ///   - onAlertDismissed: Block that returns after alert is dismissed
     func showAlertDialog(title: String, message: String, senderVC: UIViewController, onAlertDismissed: (() -> Void)?) {
-        onAlertDismissedHandler = onAlertDismissed
-        
-        let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        
-        let dismissAlertAction = UIAlertAction.init(title: "Dismiss".localized(), style: .cancel) { (action) in
-            onAlertDismissedHandler?()
+        DispatchQueue.main.async {
+            onAlertDismissedHandler = onAlertDismissed
+            
+            let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+            
+            let dismissAlertAction = UIAlertAction.init(title: "Dismiss".localized(), style: .cancel) { (action) in
+                onAlertDismissedHandler?()
+            }
+            
+            alertVC.addAction(dismissAlertAction)
+            
+            senderVC.present(alertVC, animated: true, completion: nil)
         }
-        
-        alertVC.addAction(dismissAlertAction)
-        
-        senderVC.present(alertVC, animated: true, completion: nil)
     }
     
     /// Shows a confirmation dialog with preset Cancel and Ok button and returns block upon user selection
@@ -62,7 +64,9 @@ public extension UIAlertController {
         alertVC.addAction(cancelAlertAction)
         alertVC.addAction(submitAlertAction)
         
-        senderVC.present(alertVC, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            senderVC.present(alertVC, animated: true, completion: nil)
+        }
     }
     
     /// Shows an action sheet with options and returns a block with selected index upon option selected
@@ -73,19 +77,20 @@ public extension UIAlertController {
     ///   - senderVC: UIViewController which calls this action sheet
     ///   - onOptionTapped: Blockthat returns after action selected with index
     func showActionSheet(title: String, message: String, optionsArray: [String], senderVC: UIViewController, onOptionTapped: @escaping (_ tappedIndex: Int, _ isCancel: Bool) -> Void) {
-        
-        let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
-        
-        for str in optionsArray {
-            alertVC.addAction(UIAlertAction(title: str, style: .default, handler: { (_) in
-                onOptionTapped(optionsArray.firstIndex(of: str) ?? 0, false)
+        DispatchQueue.main.async {
+            let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
+            
+            for str in optionsArray {
+                alertVC.addAction(UIAlertAction(title: str, style: .default, handler: { (_) in
+                    onOptionTapped(optionsArray.firstIndex(of: str) ?? 0, false)
+                }))
+            }
+            
+            alertVC.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: { (_) in
+                onOptionTapped(-1, true)
             }))
+            
+            senderVC.present(alertVC, animated: true, completion: nil)
         }
-        
-        alertVC.addAction(UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: { (_) in
-            onOptionTapped(-1, true)
-        }))
-        
-        senderVC.present(alertVC, animated: true, completion: nil)
     }
 }

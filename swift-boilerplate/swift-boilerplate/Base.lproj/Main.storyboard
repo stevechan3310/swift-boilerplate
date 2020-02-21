@@ -42,7 +42,6 @@
                                 </state>
                                 <connections>
                                     <action selector="getDeviceInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6x-eV-ThL"/>
-                                    <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ui-PM-GS7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK1-1H-qML">
@@ -57,8 +56,6 @@
                                 </state>
                                 <connections>
                                     <action selector="checkPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9n-22-K1u"/>
-                                    <action selector="getDeviceInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erh-a7-Osg"/>
-                                    <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bn9-Np-o2E"/>
                                 </connections>
                             </button>
                         </subviews>

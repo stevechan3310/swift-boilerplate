@@ -70,15 +70,24 @@ In this boilerplate, few extensions has been added in below classes
 Adding more extension soon...
 
 ## Permissions
-In iOS, apps require user's permission to grant access to certain device's feature such as camera, photo library, location services and etc. In this boilerplate, PermissionManager is added and can handle all permission checking in one singleton.
+In iOS, apps require user's permission to grant access to certain device's feature such as camera, photo library, location services and etc. In this boilerplate, PermissionManager is added and can handle all permission checking in one singleton. Below are few sample of how to call for permission checking.
 
-Sample usage as below for camera
+Camera / Video
 
 ```
 PermissionManager.shared.checkCameraAccess(senderVC: self) { (isGranted) in
 	//Do something after permission checking
 }
 ```
+
+Photo Library Access
+
+```
+PermissionManager.shared.checkPhotoLibraryAccess(senderVC: self) { (isGranted) in
+	//Do something after permission checking
+}
+```
+
 More samples of permission checking can be found in the project.
 
 ## Libraries
