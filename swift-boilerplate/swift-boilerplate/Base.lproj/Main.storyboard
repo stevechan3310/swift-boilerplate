@@ -45,13 +45,32 @@
                                     <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ui-PM-GS7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK1-1H-qML">
+                                <rect key="frame" x="0.0" y="224" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bpK-cD-ykk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Check Permission">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9n-22-K1u"/>
+                                    <action selector="getDeviceInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erh-a7-Osg"/>
+                                    <action selector="inAppLocalizationDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bn9-Np-o2E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oVi-dq-zPe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FhB-Gh-4Tr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVi-dq-zPe" secondAttribute="trailing" id="Opj-Xx-scC"/>
+                            <constraint firstItem="FK1-1H-qML" firstAttribute="top" secondItem="eDl-Lt-8So" secondAttribute="bottom" constant="8" id="UMg-Sx-JX4"/>
+                            <constraint firstItem="FK1-1H-qML" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZjB-aJ-Yb1"/>
                             <constraint firstItem="eDl-Lt-8So" firstAttribute="top" secondItem="oVi-dq-zPe" secondAttribute="bottom" constant="8" id="dU0-g4-yx9"/>
                             <constraint firstItem="eDl-Lt-8So" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA3-cE-Fcm"/>
+                            <constraint firstItem="FK1-1H-qML" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q0r-UG-zXy"/>
                             <constraint firstItem="eDl-Lt-8So" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rNR-SG-RoE"/>
                             <constraint firstItem="oVi-dq-zPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xHv-5X-YXB"/>
                         </constraints>

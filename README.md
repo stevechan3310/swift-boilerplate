@@ -63,9 +63,23 @@ In this boilerplate, few extensions has been added in below classes
 	- Get device OS with "iOS" prefix. Eg. "iOS 13.3"
 
 2. UIAlertController (UIAlertController_Extension.swift)
+	- showAlertDialog, shows an alert dialog with title, message and a closure when alert is dismissed.
 	- showConfirmDialog, shows a confirmation dialog with title, message and a completion block for handling convenience.
+	- showCustomConfirmDialog, shows a confirmation dialog with modifiable submit button title.
 
 Adding more extension soon...
+
+## Permissions
+In iOS, apps require user's permission to grant access to certain device's feature such as camera, photo library, location services and etc. In this boilerplate, PermissionManager is added and can handle all permission checking in one singleton.
+
+Sample usage as below for camera
+
+```
+PermissionManager.shared.checkCameraAccess(senderVC: self) { (isGranted) in
+	//Do something after permission checking
+}
+```
+More samples of permission checking can be found in the project.
 
 ## Libraries
 Common used third party libraries are included in this boilerplate

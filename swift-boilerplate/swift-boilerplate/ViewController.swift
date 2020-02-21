@@ -28,5 +28,18 @@ class ViewController: UIViewController {
             print("Is OK button tapped - ", isOkTapped ? "Yes" : "No")
         }
     }
+    
+    @IBAction func checkPermission(_ sender: Any) {
+        UIAlertController().showActionSheet(title: "Check Permission", message: "Choose a permission to check", optionsArray: ["Camera / Video", "Photo Library"], senderVC: self) { (selectedIndex, isCancel) in
+            switch (selectedIndex) {
+            case 0:
+                PermissionManager.shared.checkCameraAccess(senderVC: self) { (isGranted) in
+                    UIAlertController().showAlertDialog(title: "Camera Access", message: String.init(format: "Permission for camera is %@", isGranted ? "granted" : "denied"), senderVC: self, onAlertDismissed: nil)
+                }
+            default:
+                print("Cancelled")
+            }
+        }
+    }
 }
 
