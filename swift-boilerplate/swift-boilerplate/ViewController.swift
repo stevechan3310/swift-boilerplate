@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     
     @IBAction func checkPermission(_ sender: Any) {
         let optionsArray = ["Camera / Video",
-                            "Photo Library"]
+                            "Photo Library",
+                            "Location Services"]
         
         UIAlertController().showActionSheet(title: "Check Permission", message: "Choose a permission to check", optionsArray: optionsArray, senderVC: self) { (selectedIndex, isCancel) in
             switch (selectedIndex) {
@@ -41,6 +42,10 @@ class ViewController: UIViewController {
                 }
             case 1:
                 PermissionManager.shared.checkPhotoLibraryAccess(senderVC: self) { (isGranted) in
+                    UIAlertController().showAlertDialog(title: "Photo Library Access", message: String.init(format: "Permission for photo library is %@", isGranted ? "granted" : "denied"), senderVC: self, onAlertDismissed: nil)
+                }
+            case 2:
+                PermissionManager.shared.checkLocationAccess(accessType: .WhenInUse, senderVC: self) { (isGranted) in
                     UIAlertController().showAlertDialog(title: "Photo Library Access", message: String.init(format: "Permission for photo library is %@", isGranted ? "granted" : "denied"), senderVC: self, onAlertDismissed: nil)
                 }
             default:

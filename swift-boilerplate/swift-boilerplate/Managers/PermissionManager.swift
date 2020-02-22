@@ -11,9 +11,21 @@ import AVFoundation
 import Photos
 import UIKit
 
+//ENUMS
+/// To determine type of location access when requesting for permission
+enum LocationAccessType {
+    case WhenInUse //When Using The App
+    case Always //Always even when app is in the background
+}
+
+var onAuthorizationChanged: ((_ isGranted: Bool) -> ())?
+
 class PermissionManager
 {
     static let shared = PermissionManager()
+    
+    var clLocationManager = CLLocationManager()
+    var isRequestingLocationAccess: Bool = false
 
     private init()
     {
@@ -106,5 +118,65 @@ class PermissionManager
             print("Unable to determine permission. Unknown error")
             handler(false)
         }
+    }
+    
+    /// Check for location services permission
+    /// - Parameters:
+    ///   - accessType: Type of location access
+    ///   - senderVC: UIViewController which calls this checking
+    ///   - handler: Block handler that returns after permission checking
+    func checkLocationAccess(accessType: LocationAccessType, senderVC: UIViewController, handler: @escaping (_ isGranted: Bool) -> Void) {
+        onAuthorizationChanged = handler
+        
+        let locStatus = CLLocationManager.authorizationStatus()
+        switch locStatus {
+        case .notDetermined:
+            DispatchQueue.main.async {
+                self.isRequestingLocationAccess = true
+                self.clLocationManager.delegate = senderVC
+                
+                if (accessType == .Always) {
+                    self.clLocationManager.requestAlwaysAuthorization()
+                } else {
+                    self.clLocationManager.requestWhenInUseAuthorization()
+                }
+            }
+        case .restricted :
+            print("Restricted, device owner must approve")
+            handler(false)
+        case .denied:
+            UIAlertController().showCustomConfirmDialog(title: "ERROR".localized(), message: "This app requires your permission to access location".localized(), submitButtonTitle: "Settings", senderVC: senderVC) { (isGoSettings) in
+                if (isGoSettings) {
+                    //Navigate to app's privacy settings to grant access to location
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: { _ in
+                            
+                        })
+                    }
+                } else {
+                    handler(false)
+                }
+            }
+        case .authorizedAlways, .authorizedWhenInUse:
+            handler(true)
+        default :
+            print("Unable to determine permission. Unknown error")
+            handler(false)
+        }
+    }
+}
+
+extension UIViewController: CLLocationManagerDelegate {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (PermissionManager.shared.isRequestingLocationAccess) {
+            switch status {
+            case .authorizedAlways, .authorizedWhenInUse:
+                onAuthorizationChanged?(true)
+            default :
+                onAuthorizationChanged?(false)
+            }
+        }
+        
+        PermissionManager.shared.isRequestingLocationAccess = false
     }
 }

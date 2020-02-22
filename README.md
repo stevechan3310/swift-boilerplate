@@ -88,6 +88,14 @@ PermissionManager.shared.checkPhotoLibraryAccess(senderVC: self) { (isGranted) i
 }
 ```
 
+Location Services Access
+
+```
+PermissionManager.shared.checkLocationAccess(accessType: .WhenInUse, senderVC: self) { (isGranted) in
+	//Do something after permission checking
+}
+```
+
 More samples of permission checking can be found in the project.
 
 ## Libraries
