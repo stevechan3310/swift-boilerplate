@@ -39,7 +39,7 @@ BiomatricManager is included in this boilerplate and it can handle all your auth
 - checkSupportedBiometricType - Check what type of biometric your device supports (Face ID / Touch ID / None)
 
 ```
-To be added
+let biometricType = BiometricManager.shared.checkBiometricType()
 ```
 
 - performAuthentication - Performs biometric authentication and returns a block with status of authentication, type of authentication and error if any.

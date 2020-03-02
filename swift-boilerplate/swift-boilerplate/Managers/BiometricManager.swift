@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 import LocalAuthentication
 
+enum BiometricType {
+    case FaceID
+    case TouchID
+    case NONE
+}
+
 class BiometricManager {
     static let shared = BiometricManager()
     
@@ -18,6 +24,24 @@ class BiometricManager {
         
     }
     
+    /// Check what type of biometric is supported in this device
+    func checkSupportedBiometricType() -> BiometricType {
+        let authContext = LAContext()
+        let _ = authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        switch(authContext.biometryType) {
+        case .touchID:
+            return .TouchID
+        case .faceID:
+            return .FaceID
+        default :
+            return .NONE
+        }
+    }
+    
+    /// Perform Biometric Authentication
+    /// - Parameters:
+    ///   - senderVC: UIViewController that calls this
+    ///   - onAuthenticated: Block that returns upon authentication completes with result
     func performAuthentication(senderVC: UIViewController, onAuthenticated: @escaping (_ isAuthenticated: Bool, _ biometricType: LABiometryType, _ errorMessage: String) -> Void) {
         let localAuthenticationContext = LAContext()
         localAuthenticationContext.localizedFallbackTitle = "Authentication failed, please use your passcode".localized()
@@ -61,6 +85,8 @@ class BiometricManager {
         }
     }
     
+    /// Maps LAErrorCode into meaningful error description
+    /// - Parameter laErrorCode: LAErrorCode returned upon evaluation
     func getErrorDescFromLAErrorCode(laErrorCode: LAError.Code) -> String {
         switch laErrorCode {
         case .appCancel:

@@ -56,16 +56,36 @@ class ViewController: UIViewController {
     
     @IBAction func biometricAuthentication(_ sender: Any) {
         //Test on biometric authentication
-        BiometricManager.shared.performAuthentication(senderVC: self) { (isAuthenticated, biometricType, errorMessage) in
-            NSLog("Authenticated: %@, Biometric Type: %@", isAuthenticated ? "success" : "failed", biometricType == .faceID ? "Face ID" : biometricType == .touchID ? "Touch ID" : "NONE")
-            if (isAuthenticated) {
-                UIAlertController().showAlertDialog(title: "Biometric Authentication".localized(), message: "Successful".localized(), senderVC: self) {
-                    
+        UIAlertController().showActionSheet(title: "Biometric Authentication", message: "Choose an option", optionsArray: ["Check Biometric Type", "Perform Biometric Authentication"], senderVC: self) { (index, isCancel) in
+            switch index {
+            case 0:
+                var biometricType: String = ""
+                
+                switch BiometricManager.shared.checkSupportedBiometricType() {
+                case .FaceID:
+                    biometricType = "Face ID"
+                case .TouchID:
+                    biometricType = "Touch ID"
+                default:
+                    biometricType = "None"
                 }
-            } else {
-                UIAlertController().showAlertDialog(title: "Biometric Authentication".localized(), message: errorMessage, senderVC: self) {
-                    
+                
+                UIAlertController().showAlertDialog(title: "Biometric Type", message: biometricType, senderVC: self, onAlertDismissed: nil)
+            case 1:
+                BiometricManager.shared.performAuthentication(senderVC: self) { (isAuthenticated, biometricType, errorMessage) in
+                    NSLog("Authenticated: %@, Biometric Type: %@", isAuthenticated ? "success" : "failed", biometricType == .faceID ? "Face ID" : biometricType == .touchID ? "Touch ID" : "NONE")
+                    if (isAuthenticated) {
+                        UIAlertController().showAlertDialog(title: "Biometric Authentication".localized(), message: "Successful".localized(), senderVC: self) {
+
+                        }
+                    } else {
+                        UIAlertController().showAlertDialog(title: "Biometric Authentication".localized(), message: errorMessage, senderVC: self) {
+
+                        }
+                    }
                 }
+            default:
+                print("")
             }
         }
     }
