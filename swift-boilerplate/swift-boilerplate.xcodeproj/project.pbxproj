@@ -18,6 +18,7 @@
 		624CA3D323AB7A0B000E12A6 /* swift_boilerplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624CA3D223AB7A0B000E12A6 /* swift_boilerplateUITests.swift */; };
 		62912D9923F52A9D00C7C945 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912D9823F52A9D00C7C945 /* Constants.swift */; };
 		62912D9D23F5356400C7C945 /* UIDevice_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912D9C23F5356400C7C945 /* UIDevice_Extension.swift */; };
+		62BA5A6D24089A9100995D37 /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA5A6C24089A9100995D37 /* BiometricManager.swift */; };
 		62CE3BD323FBEC9E008B6F24 /* UIAlertController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE3BD223FBEC9E008B6F24 /* UIAlertController_Extension.swift */; };
 		62CE3BD523FCD625008B6F24 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE3BD423FCD625008B6F24 /* PermissionManager.swift */; };
 		707C59DA4A657B3925A7029D /* Pods_swift_boilerplate_swift_boilerplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78450533739C338A744A8A68 /* Pods_swift_boilerplate_swift_boilerplateUITests.framework */; };
@@ -66,6 +67,7 @@
 		624CA3D423AB7A0B000E12A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62912D9823F52A9D00C7C945 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62912D9C23F5356400C7C945 /* UIDevice_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice_Extension.swift; sourceTree = "<group>"; };
+		62BA5A6C24089A9100995D37 /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
 		62CE3BD223FBEC9E008B6F24 /* UIAlertController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController_Extension.swift; sourceTree = "<group>"; };
 		62CE3BD423FCD625008B6F24 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		78450533739C338A744A8A68 /* Pods_swift_boilerplate_swift_boilerplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_boilerplate_swift_boilerplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				62CE3BD423FCD625008B6F24 /* PermissionManager.swift */,
+				62BA5A6C24089A9100995D37 /* BiometricManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				624CA3B523AB7A09000E12A6 /* ViewController.swift in Sources */,
 				620E4C9D23F3DE3200F4C8DD /* InAppLocalizationVC.swift in Sources */,
+				62BA5A6D24089A9100995D37 /* BiometricManager.swift in Sources */,
 				62CE3BD323FBEC9E008B6F24 /* UIAlertController_Extension.swift in Sources */,
 				624CA3B123AB7A09000E12A6 /* AppDelegate.swift in Sources */,
 				62CE3BD523FCD625008B6F24 /* PermissionManager.swift in Sources */,

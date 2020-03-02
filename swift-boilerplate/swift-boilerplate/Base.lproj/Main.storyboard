@@ -58,13 +58,30 @@
                                     <action selector="checkPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9n-22-K1u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9p-Mt-mlK">
+                                <rect key="frame" x="0.0" y="292" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="55T-lp-jhx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Biometric Authentication">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="biometricAuthentication:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Mu-F2-b7W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oVi-dq-zPe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FhB-Gh-4Tr"/>
+                            <constraint firstItem="o9p-Mt-mlK" firstAttribute="top" secondItem="FK1-1H-qML" secondAttribute="bottom" constant="8" id="Lf7-GG-c3y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVi-dq-zPe" secondAttribute="trailing" id="Opj-Xx-scC"/>
                             <constraint firstItem="FK1-1H-qML" firstAttribute="top" secondItem="eDl-Lt-8So" secondAttribute="bottom" constant="8" id="UMg-Sx-JX4"/>
                             <constraint firstItem="FK1-1H-qML" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZjB-aJ-Yb1"/>
+                            <constraint firstItem="o9p-Mt-mlK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ccx-Cp-omA"/>
+                            <constraint firstItem="o9p-Mt-mlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cuD-CS-jly"/>
                             <constraint firstItem="eDl-Lt-8So" firstAttribute="top" secondItem="oVi-dq-zPe" secondAttribute="bottom" constant="8" id="dU0-g4-yx9"/>
                             <constraint firstItem="eDl-Lt-8So" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA3-cE-Fcm"/>
                             <constraint firstItem="FK1-1H-qML" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q0r-UG-zXy"/>
