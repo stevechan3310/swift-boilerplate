@@ -32,6 +32,24 @@ You can also use the genstrings.swift to auto-generate strings that needs to be 
 ```
 ./genstrings.swift
 ```
+
+## Biometric Authentication
+BiomatricManager is included in this boilerplate and it can handle all your authentication needs whether using Face ID or Touch ID. There are few functions included in this biometric manager as below.
+
+- checkSupportedBiometricType - Check what type of biometric your device supports (Face ID / Touch ID / None)
+
+```
+To be added
+```
+
+- performAuthentication - Performs biometric authentication and returns a block with status of authentication, type of authentication and error if any.
+
+```
+BiometricManager.shared.performAuthentication(senderVC: self) { (isAuthenticated, biometricType, errorMessage) in
+	//Do something after authentication process is completed
+}
+```
+
 ## Constants
 In this boilerplate, case-less enum is used to create constants for such as colors, configs for your app or even keys for your values in UserDefault or Keychain. Enum for Colors as below.
 
